@@ -4,13 +4,13 @@ import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Stack from 'react-bootstrap/Stack';
 import User from '../models/User';
-import LoginSignUpService from '../services/LoginSignUpService';
+import AuthService from '../services/AuthService';
 
 const SignUp = (props) => {
 
     const [signUpValidated, setSignUpValidated] = useState(false);
 
-    const service = new LoginSignUpService();
+    const service = new AuthService();
 
     const handleSignUpSubmit = async (event) => {
         event.preventDefault();

@@ -7,7 +7,7 @@ import Landing from './components/Landing';
 const App = () => {
 
     return (
-        <div className="d-flex flex-column" style={{ minHeight: '100vh' }}>
+        <div className="d-flex flex-column" style={{ minHeight: '100vh' }} >
             <NavigationBar />
             <Landing />
         </div>
