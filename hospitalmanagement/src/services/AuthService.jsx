@@ -28,9 +28,23 @@ class AuthService {
         return reply;
     };
 
-    hello = () => {
-        console.log("hello");
-    }
+    search = async (user, username) => {
+        var reply = [];
+        await axios.post(
+            `${this.baseURL}/search`,
+            { message: username },
+            {
+                headers: {
+                    Authorization: `Bearer ${user.accessToken}`,
+                },
+            }
+        ).then((response) => {
+            reply = [true, response];
+        }).catch((error) => {
+            reply = [false, error]
+        });
+        return reply;
+    };
 }
 
 export default AuthService;
