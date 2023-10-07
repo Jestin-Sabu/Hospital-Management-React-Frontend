@@ -2,25 +2,25 @@ import { useState } from 'react';
 import Nav from 'react-bootstrap/Nav';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Navbar from 'react-bootstrap/Navbar';
-import Dashboard from './Dashboard/Dashboard';
-import PatientRecords from './PatientManagement/PatientRecords';
-import PatientRegistration from './PatientManagement/PatientRegistration';
-import AdmissionsDischarges from './PatientManagement/AdmissionsDischarges';
-import HealthRecords from './PatientManagement/HealthRecords';
 import AppointmentScheduling from './AppointmentManagement/AppointmentScheduling';
 import CalenderView from './AppointmentManagement/CalenderView';
-import UserAdministration from './StaffManagement/UserAdministration';
-import RolesPermissions from './StaffManagement/RolesPermissions';
-import MedicationSupplies from './InventoryManagement/MedicationSupplies';
-import OrderReorder from './InventoryManagement/OrderReorder';
 import GenerateInvoices from './BillingInvoices/GenerateInvoices';
 import PaymentProcessing from './BillingInvoices/PaymentProcessing';
-import GenerateReports from './ReportsAnalytics/GenerateReports';
-import DataVisualization from './ReportsAnalytics/DataVisualization';
-import UserAuthentication from './SecurityAccessControl/UserAuthentication';
-import AuditTrails from './SecurityAccessControl/AuditTrails';
 import Messaging from './Communication/Messaging';
 import Notifications from './Communication/Notifications';
+import Dashboard from './Dashboard/Dashboard';
+import MedicationSupplies from './InventoryManagement/MedicationSupplies';
+import OrderReorder from './InventoryManagement/OrderReorder';
+import AdmissionsDischarges from './PatientManagement/AdmissionsDischarges';
+import HealthRecords from './PatientManagement/HealthRecords';
+import PatientRecords from './PatientManagement/PatientRecords';
+import PatientRegistration from './PatientManagement/PatientRegistration';
+import DataVisualization from './ReportsAnalytics/DataVisualization';
+import GenerateReports from './ReportsAnalytics/GenerateReports';
+import AuditTrails from './SecurityAccessControl/AuditTrails';
+import UserAuthentication from './SecurityAccessControl/UserAuthentication';
+import RolesPermissions from './StaffManagement/RolesPermissions';
+import UserAdministration from './StaffManagement/UserAdministration';
 
 const AdminPanel = () => {
 
@@ -32,7 +32,7 @@ const AdminPanel = () => {
 
     return (
         <div className="d-flex flex-row">
-            <Navbar className="bg-body-tertiary p-2 align-items-start" data-bs-theme="dark" style={{ width: "250px", height: "100vh" }} >
+            <Navbar className="bg-body-tertiary p-2 align-items-start navigate-border" data-bs-theme="dark" style={{ width: "250px", height: "100vh" }} >
                 <Nav className="flex-column" activeKey={activeKey} onSelect={handleSelect}>
                     <Nav.Link eventKey="1">Dashboard</Nav.Link>
                     <NavDropdown title="Patient Management" active={activeKey.split('.')[0] === "2"}>

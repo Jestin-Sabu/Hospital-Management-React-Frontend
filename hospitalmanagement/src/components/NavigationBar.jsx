@@ -22,7 +22,7 @@ const NavigationBar = () => {
     }
 
     return (
-        <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark" sticky="top">
+        <Navbar expand="lg" className="bg-body-tertiary main-navigate-border" data-bs-theme="dark" sticky="top">
             <div className="d-flex justify-content-between align-items-center w-100 mx-3">
                 <Navbar.Brand className="fs-4">Hospital Management</Navbar.Brand>
                 {user && (
