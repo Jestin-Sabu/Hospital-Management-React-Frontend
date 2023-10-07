@@ -1,11 +1,11 @@
 import Container from 'react-bootstrap/Container';
 
-const HealthRecords = () => {
-return (
+const RolesPermissions = () => {
+    return (
         <Container fluid className="p-3">
-            <h1>Health Records</h1>
+            <h1>Roles & Permission</h1>
         </Container>
     );
 };
 
-export default HealthRecords;
+export default RolesPermissions;

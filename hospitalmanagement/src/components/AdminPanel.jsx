@@ -5,8 +5,22 @@ import Navbar from 'react-bootstrap/Navbar';
 import Dashboard from './Dashboard/Dashboard';
 import PatientRecords from './PatientManagement/PatientRecords';
 import PatientRegistration from './PatientManagement/PatientRegistration';
-
-
+import AdmissionsDischarges from './PatientManagement/AdmissionsDischarges';
+import HealthRecords from './PatientManagement/HealthRecords';
+import AppointmentScheduling from './AppointmentManagement/AppointmentScheduling';
+import CalenderView from './AppointmentManagement/CalenderView';
+import UserAdministration from './StaffManagement/UserAdministration';
+import RolesPermissions from './StaffManagement/RolesPermissions';
+import MedicationSupplies from './InventoryManagement/MedicationSupplies';
+import OrderReorder from './InventoryManagement/OrderReorder';
+import GenerateInvoices from './BillingInvoices/GenerateInvoices';
+import PaymentProcessing from './BillingInvoices/PaymentProcessing';
+import GenerateReports from './ReportsAnalytics/GenerateReports';
+import DataVisualization from './ReportsAnalytics/DataVisualization';
+import UserAuthentication from './SecurityAccessControl/UserAuthentication';
+import AuditTrails from './SecurityAccessControl/AuditTrails';
+import Messaging from './Communication/Messaging';
+import Notifications from './Communication/Notifications';
 
 const AdminPanel = () => {
 

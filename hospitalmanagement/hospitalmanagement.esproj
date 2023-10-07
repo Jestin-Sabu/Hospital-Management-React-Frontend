@@ -10,4 +10,12 @@
     <!-- Folder where production build objects will be placed -->
     <BuildOutputFolder>$(MSBuildProjectDirectory)\dist</BuildOutputFolder>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\components\AppointmentManagement\" />
+    <Folder Include="src\components\InventoryManagement\" />
+    <Folder Include="src\components\BillingInvoices\" />
+    <Folder Include="src\components\Communication\" />
+    <Folder Include="src\components\SecurityAccessControl\" />
+    <Folder Include="src\components\ReportsAnalytics\" />
+  </ItemGroup>
 </Project>
