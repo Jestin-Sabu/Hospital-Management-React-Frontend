@@ -36,7 +36,7 @@ const PatientRecords = () => {
         setSearchValidated(false);
 
         var userName = form.elements.inputSearchUserName.value;
-        var response = await service.search(user, userName);
+        var response = await service.searchPatient(user, userName);
         if (response[0] === true) {
             setSearchUser(response[1].data);
             console.log(response[1].data)
