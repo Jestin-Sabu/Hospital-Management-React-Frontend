@@ -1,11 +1,11 @@
 import Container from 'react-bootstrap/Container';
 
-const UserAdministration = () => {
+const ActivityMonitoring = () => {
     return (
         <Container>
-            <h1>User Administration</h1>
+            <h1>Activity Monitoring</h1>
         </Container>
     );
 }
 
-export default UserAdministration;
+export default ActivityMonitoring;
