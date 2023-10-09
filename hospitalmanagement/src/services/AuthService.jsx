@@ -45,6 +45,42 @@ class AuthService {
         });
         return reply;
     };
+
+    searchPatient = async (user, username) => {
+        var reply = [];
+        await axios.post(
+            `${this.baseURL}/patient/search`,
+            { message: username },
+            {
+                headers: {
+                    Authorization: `Bearer ${user.accessToken}`,
+                },
+            }
+        ).then((response) => {
+            reply = [true, response];
+        }).catch((error) => {
+            reply = [false, error]
+        });
+        return reply;
+    };
+
+    searchDoctor = async (user, username) => {
+        var reply = [];
+        await axios.post(
+            `${this.baseURL}/doctor/search`,
+            { message: username },
+            {
+                headers: {
+                    Authorization: `Bearer ${user.accessToken}`,
+                },
+            }
+        ).then((response) => {
+            reply = [true, response];
+        }).catch((error) => {
+            reply = [false, error]
+        });
+        return reply;
+    };
 }
 
 export default AuthService;

@@ -19,8 +19,11 @@ import DataVisualization from './ReportsAnalytics/DataVisualization';
 import GenerateReports from './ReportsAnalytics/GenerateReports';
 import AuditTrails from './SecurityAccessControl/AuditTrails';
 import UserAuthentication from './SecurityAccessControl/UserAuthentication';
-import RolesPermissions from './StaffManagement/RolesPermissions';
-import UserAdministration from './StaffManagement/UserAdministration';
+import ActivityMonitoring from './StaffManagement/ActivityMonitoring';
+import DeactivationRemoval from './StaffManagement/DeactivationRemoval';
+import FeedbackManagement from './StaffManagement/FeedbackManagement';
+import ProfileManagement from './StaffManagement/ProfileManagement';
+import StaffRegistration from './StaffManagement/StaffRegistration';
 
 const AdminPanel = () => {
 
@@ -46,8 +49,11 @@ const AdminPanel = () => {
                         <NavDropdown.Item eventKey="3.2">Calender View</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Staff Management" active={activeKey.split('.')[0] === "4"}>
-                        <NavDropdown.Item eventKey="4.1">User Administration</NavDropdown.Item>
-                        <NavDropdown.Item eventKey="4.2">Roles and Permission</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.1">Staff Registration</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.2">Profile Management</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.3">Activity Monitoring</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.4">Deactivation & Removal</NavDropdown.Item>
+                        <NavDropdown.Item eventKey="4.5">Feedback Management</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Inventory Management" active={activeKey.split('.')[0] === "5"}>
                         <NavDropdown.Item eventKey="5.1">Medication & Supplies</NavDropdown.Item>
@@ -93,10 +99,19 @@ const AdminPanel = () => {
                 <CalenderView />
             )}
             {activeKey === "4.1" && (
-                <UserAdministration />
+                <StaffRegistration />
             )}
             {activeKey === "4.2" && (
-                <RolesPermissions />
+                <ProfileManagement />
+            )}
+            {activeKey === "4.3" && (
+                <ActivityMonitoring />
+            )}
+            {activeKey === "4.4" && (
+                <DeactivationRemoval />
+            )}
+            {activeKey === "4.5" && (
+                <FeedbackManagement />
             )}
             {activeKey === "5.1" && (
                 <MedicationSupplies />

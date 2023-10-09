@@ -30,7 +30,8 @@ const SignUp = (props) => {
             form.elements.inputPin.value,
             form.elements.inputMobileNumber.value,
             form.elements.inputSignUpEmail.value,
-            form.elements.inputSignUpPassword.value
+            form.elements.inputSignUpPassword.value,
+            'patient'
         );
 
         var response = await service.signUp(user);

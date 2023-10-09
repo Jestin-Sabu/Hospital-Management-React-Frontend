@@ -1,6 +1,6 @@
 class User {
 
-    constructor(username, firstName, lastName, address, pin, mobileNumber, email, password) {
+    constructor(username, firstName, lastName, address, pin, mobileNumber, email, password, role) {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -9,7 +9,7 @@ class User {
         this.mobileNumber = mobileNumber;
         this.email = email;
         this.password = password;
-        this.role = ['patient'];
+        this.role = [role];
         this.token = '';
     }
 
